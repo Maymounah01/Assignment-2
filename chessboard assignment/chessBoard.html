@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    // declaring an empty string
+    var answer = "";
+
+    // To input the lenght and height of the chessboard 
+    var width = prompt(`Enter the width of the chessboard`)
+    width = Number(width)
+    var height = prompt(`Enter the height of the chessboard`)
+    height =  Number(height)
+
+    // to get the height
+    for (let x = 1; x <= height; x++) {
+
+      // to get the width
+      for (let y = 1; y <= width; y++) {
+        let space = (x + y) % 2;
+        if (space === 0) {
+          answer += ' ';
+        } else {
+          answer += '#';
+        }
+      }
+
+      // to go to the next line  
+      answer += '\n'
+    }
+    console.log(answer)
+  </script>
+</body>
+</html>
